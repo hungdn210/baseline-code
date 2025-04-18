@@ -95,7 +95,7 @@ class data_trans(Dataset):
 
 def main():
     # pass
-    dp = data_preprocess(file_path = '../data/dataset/Water_Discharge_STA_Normalized.csv',train_per = 0.8, vali_per = 0.0, in_dim = 96)
+    dp = data_preprocess(file_path = '../data/dataset/Water_Discharge_Data.csv',train_per = 0.8, vali_per = 0.0, in_dim = 96)
     raw_data = dp.load_data()
     (train_data,train_groundtruth),(vali_data,vali_groundtruth),(test_data,test_groundtruth) = dp.split_data(raw_data = raw_data, _type = 'linear')
     print("done!")
